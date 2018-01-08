@@ -1,15 +1,19 @@
 {
-  "name": "ergoProxy",
+  "name": "ergoproxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "`$ npm install ergoProxy`",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "proxy",
-    "ergoProxy"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manglobe/ergoProxy.git"
+  },
   "author": "studio4",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manglobe/ergoProxy/issues"
+  },
+  "homepage": "https://github.com/manglobe/ergoProxy#readme"
 }
