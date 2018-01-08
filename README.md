@@ -2,6 +2,10 @@
 
 `$ npm install ergoProxy`
 
+## for what
+ 
+  ### ergoProxy is a way for change a function's callBack in different place
+  
 ## how to use 
  
 `new ergoProxy (functionName)`
@@ -23,23 +27,21 @@ let a = (ele, callback) => {
     2000
   )
 }
-let b = new ergoProxy(a)
+let b = new ergoProxy(a);
+
+b(0);
 b.callBacks.push(
-  [
-    ()=> console.log(`new callback`),
-    ()=> console.log(`new callback1`),
-    ()=> console.log(`new callback2`)
-  ]
+  ()=> console.log(`new callback1`),
+)
+b.callBacks.push(
+  ()=> console.log(`new callback2`),
 )
 
-b(0)  // 0 new callback new callback1 new callback2
---------------------------------------------------------
-let c = new ergoProxy(a)
+ // 0 new callback1 new callback2
+--------------------------------------------------
+b(0) 
+b.callBacks.splice(0,1)
 
-c.callBacks.push(
-    ()=> console.log(`new callback c`),
-)
-
-b(0)  // 0 new callbackc
+ // 0 new callback2
 
 ```
